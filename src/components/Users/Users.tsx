@@ -8,12 +8,14 @@ interface Props {
 
 const Users: React.FC<Props> = ({users}) => {
   return (
-    <div>
-      <h2>List of Users</h2>
-      {users.map((user) => (
-        <UserItem key={user.id} user={user}/>
-      ))}
-    </div>
+    <>
+      <h2 className="mb-4">List of Users</h2>
+      <div className="d-flex gap-2 flex-wrap">
+        {users.map((user) => (
+          <UserItem key={user.id} user={user}/>
+        ))}
+      </div>
+    </>
   );
 };
 

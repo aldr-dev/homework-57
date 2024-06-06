@@ -81,7 +81,6 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
           id="active"
           type="checkbox"
           name="active"
-          required
           className="form-check-input"
           onChange={changeBooleanValue}
           checked={userData.active}
