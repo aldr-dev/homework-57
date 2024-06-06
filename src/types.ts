@@ -3,5 +3,12 @@ export interface User {
   name: string;
   email: string;
   active: boolean;
-  role: 'user' | 'editor' | 'admin';
+  role: '';
+}
+
+export interface UserMutation {
+  name: string;
+  email: string;
+  active: boolean;
+  role: '';
 }
