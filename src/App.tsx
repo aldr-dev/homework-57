@@ -4,10 +4,10 @@ import Users from './components/Users/Users';
 import {User} from './types';
 
 const App = () => {
-  const [user, setUser] = useState<User[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
 
   const addUser = (user: User) => {
-      setUser((prevState) => {
+      setUsers((prevState) => {
         return [...prevState, user];
       });
   };
@@ -19,7 +19,7 @@ const App = () => {
           <UserForm onSubmit={addUser}/>
         </div>
         <div className="col-md-6">
-          <Users />
+          <Users users={users}/>
         </div>
       </div>
     </div>
