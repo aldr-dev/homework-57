@@ -1,5 +1,6 @@
-import {User} from '../../types';
 import React from 'react';
+import {User} from '../../types';
+import './UserItem.css';
 
 interface Props {
   user: User;
@@ -7,7 +8,7 @@ interface Props {
 
 const UserItem: React.FC<Props> = ({user}) => {
   return (
-    <div className="card flex-grow-1" style={{width: '300px'}}>
+    <div className="card flex-grow-1 card-size">
       <div className="card-body">
         <h5 className="card-title fw-medium">Name: {user.name}</h5>
         <span className="card-text d-block">Email: {user.email}</span>
